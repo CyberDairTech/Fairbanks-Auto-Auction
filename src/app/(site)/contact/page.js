@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PageIntro from "@/components/PageIntro";
 import ContactForm from "./ContactForm";
 
@@ -38,7 +39,14 @@ export default function ContactPage() {
               Sun closed
             </div>
           </div>
-          <div className="h-[160px] bg-[repeating-linear-gradient(135deg,#DCDCD4,#DCDCD4_10px,#D2D2C8_10px,#D2D2C8_20px)]" />
+          <div className="relative h-[160px] overflow-hidden">
+            <Image
+              src="/images/contact.jpg"
+              alt="Northern lights over the boreal forest near Fairbanks, Alaska"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <ContactForm />

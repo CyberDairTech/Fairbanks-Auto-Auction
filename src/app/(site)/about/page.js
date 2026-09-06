@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import PageIntro from "@/components/PageIntro";
 
@@ -43,7 +44,14 @@ export default function AboutPage() {
         </div>
 
         <div className="mb-14 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <div className="h-[260px] bg-[repeating-linear-gradient(135deg,#DCDCD4,#DCDCD4_10px,#D2D2C8_10px,#D2D2C8_20px)]" />
+          <div className="relative h-[260px] overflow-hidden">
+            <Image
+              src="/images/about.png"
+              alt="Aerial view of the Fairbanks Auto Auction lot, full of vehicles ready for auction"
+              fill
+              className="object-cover"
+            />
+          </div>
           <div>
             <h2 className="mb-3 font-display text-2xl font-semibold text-ink">
               What is Fairbanks Auto Auction&apos;s connection to Great North Auction?

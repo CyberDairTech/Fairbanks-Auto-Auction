@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Clock, MapPin, Truck, ArrowRight } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { mapVehicleRow } from "@/lib/photos";
@@ -92,7 +93,15 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="min-h-[300px] min-w-0 bg-[repeating-linear-gradient(135deg,#1a2c50,#1a2c50_10px,#17284a_10px,#17284a_20px)] md:min-h-[380px]" />
+          <div className="relative min-h-[300px] min-w-0 overflow-hidden md:min-h-[380px]">
+            <Image
+              src="/images/hero.png"
+              alt="Aerial view of the Fairbanks Auto Auction lot, full of vehicles ready for auction"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -167,7 +176,14 @@ export default async function HomePage() {
               See how consigning works <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="h-[220px] bg-[repeating-linear-gradient(135deg,#1a2c50,#1a2c50_10px,#17284a_10px,#17284a_20px)]" />
+          <div className="relative h-[220px] overflow-hidden">
+            <Image
+              src="/images/consign.webp"
+              alt="Downtown Fairbanks along the Chena River"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
     </>

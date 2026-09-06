@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Facebook } from "lucide-react";
 import { subscribeAction } from "@/app/actions";
 
 const LINKS = [
@@ -39,11 +39,19 @@ export default function Footer() {
             <div className="mb-3 font-display text-lg font-bold text-white">
               Fairbanks Auto Auction
             </div>
-            <p className="max-w-[240px] text-sm leading-relaxed">
+            <p className="mb-3 max-w-[240px] text-sm leading-relaxed">
               1665 Richardson Hwy, Fairbanks, AK 99701
               <br />
               (907) 347-2219
             </p>
+            <a
+              href="https://www.facebook.com/Greatnorthauction/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-white"
+            >
+              <Facebook size={16} /> Follow us on Facebook
+            </a>
           </div>
 
           <div>

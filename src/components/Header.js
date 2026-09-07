@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
@@ -21,8 +22,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-30 bg-ink text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-lg font-bold tracking-tight">
-          Fairbanks Auto Auction
+        <Link href="/" className="flex items-center rounded bg-white px-2 py-1.5">
+          <Image
+            src="/images/logo.png"
+            alt="Fairbanks Auto Auction"
+            width={2172}
+            height={724}
+            className="h-8 w-auto md:h-9"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm md:flex">
